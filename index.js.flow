@@ -1,0 +1,23 @@
+// @flow
+import React, { Component } from 'react';
+
+
+export default class Sandbox extends Component {
+    props: {
+        title: string,
+        children: React$Element<*> | React$Element<*>[]
+    };
+    render(): React$Element<*> {
+        return (
+            <article>
+                <header>
+
+                    <h1>{this.props.title}</h1>
+                </header>
+                <div className="article-body">
+                    {this.props.children}
+                </div>
+            </article>
+        );
+    }
+}
